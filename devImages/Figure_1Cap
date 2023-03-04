@@ -1,0 +1,13 @@
+This shows the resulting image when the code ran after my first session with it. 
+It shows the sensitivity for just one of the winches, and clearly demonstrates that there is SIGNIFICANT bias happening due to only having 4 samples. 
+
+This bias has also lead me to understand a core issue in my methodology. 
+If you use the "how much does the winch change given a set change in position", it only works to measure sensitivity IF you are checking a movement in a single consistent direction.
+If you allow it to find any direction, the winch would change the most when the movement points directly away from it. Thus, it will *always* be the exact same sensitivity.
+
+I will be working on a complete rework of my sensitivity mapping method. I'm unsure what kind at the moment, but I suspect this problem is much more complicated than I thought.
+One possible idea, which is, of course, much more complicated than my initial thoughts going in, is a more winch-centric approach. 
+I'm unsure exactly the method behind it yet, but I think it would involve changing the winch states themselves, recalculating where the manipulator would end up, and 
+doing that for every possible wrong winch state. this would make things much more mathematically involved, however, as there are some combinations that just aren't possible.
+
+I may have more thoughts at the beginning of next session, however.

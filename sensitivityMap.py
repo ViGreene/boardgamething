@@ -88,6 +88,5 @@ def offsetSubtract(arr):
     off4 = padded[1:-1, :-2]
     return distProcessing([np.abs(np.subtract(arr, off1)), np.abs(np.subtract(arr, off2)), np.abs(np.subtract(arr, off3)), np.abs(np.subtract(arr, off4))])
 test1 = offsetSubtract(w1Dist)
-print(test1)
 plt.imshow(test1, cmap='Greys', origin="lower")
 plt.show()
